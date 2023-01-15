@@ -675,13 +675,7 @@ end)
 
 end)
 
-local Section = Tab:NewSection("BrookHaven)
 
-Section:NewButton("İceHub", "Hahah", function()
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
-
-end)
 
 
 local Section = Tab:NewSection("coming soon...")
@@ -965,15 +959,8 @@ Section:NewButton("V Hub Key=KillYourself", "Troll", function()
 
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Veincx5315/Created/VHub/Simple'),true))()
 
-end)
-
-Section:NewButton("Pendulum Hub", "Fe Troll", function() 
-
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Veincx5315/Created/VHub/Simple'),true))()
-
-end)
+end) 
 
 local Tab = Window:NewTab("Credits")
 
 local Section = Tab:NewSection("Credits By 17K_Shafowİnf")
-
