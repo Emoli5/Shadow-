@@ -19,6 +19,126 @@ game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(
 
 end)
 
+Section:NewButton("buy Hand Rainbow", "cost 1m", function()
+    
+local args = {
+    [1] = "Hand Rainbow"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args))
+
+end)
+
+
+Section:NewButton("buy Hand Yellow", "cost 20", function()
+    
+local args = {
+    [1] = "Hand Yellow"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args))
+
+end)
+
+Section:NewButton("buy Hand Green", "cost 50", function()
+    
+local args = {
+    [1] = "Hand Green"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args))
+
+end)
+
+Section:NewButton("buy Hand Cyan", "cost 100", function()
+    
+local args = {
+    [1] = "Hand Cyan"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args))
+
+end)
+
+Section:NewButton("buy Hand Blue", "cost 250", function()
+    
+local args = {
+    [1] = "Hand Blue"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args))
+
+end)
+
+Section:NewButton("buy Hand Purple", "cost 500", function()
+    
+local args = {
+    [1] = "Hand Purple"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args))
+
+end)
+
+Section:NewButton("buy Hand Pink", "cost 1k", function()
+    
+local args = {
+    [1] = "Hand Pink"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args))
+
+end)
+
+Section:NewButton("buy Hand Orange", "cost 2.5k", function()
+    
+local args = {
+    [1] = "Hand Orange"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args))
+
+end)
+
+Section:NewButton("buy Hand Red", "cost 5k", function()
+    
+local args = {
+    [1] = "Hand Red"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args))
+
+end)
+
+Section:NewButton("buy Hand", "cost 10k", function()
+    
+local args = {
+    [1] = "Hand"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args))
+
+end)
+
+Section:NewButton("buy Hand White", "cost 10k", function()
+    
+local args = {
+    [1] = "Hand White"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args))
+
+end)
+
+Section:NewButton("buy Hand Black", "50k", function()
+    
+local args = {
+    [1] = "Hand Black"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args))
+
+end)
 
 Section:NewButton("buy box toy Harambe", "for 1m", function()
     
