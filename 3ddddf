@@ -1085,7 +1085,7 @@ local Tab = Window:NewTab("Hand Auto Buys")
 
 local Section = Tab:NewSection("auto buys Hand")
 
-Section:NewToggle("auto buy Dart", "auto buys", function(state)
+Section:NewToggle("auto buy Hand Yellow", "auto buys", function(state)
     if state then
         _G.on = true
         while _G.on do
