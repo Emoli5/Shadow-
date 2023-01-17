@@ -609,6 +609,7 @@ end
 end)
 
 
+
 local Tab = Window:NewTab("Script")
 
 local Section = Tab:NewSection("Script")
@@ -1080,6 +1081,70 @@ Section:NewButton("V Hub Key=KillYourself", "Troll", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Veincx5315/Created/VHub/Simple'),true))()
 
 end) 
+local Tab = Window:NewTab("Hand Auto Buys")
+
+local Section = Tab:NewSection("auto buys Hand")
+
+Section:NewToggle("auto buy Dart", "auto buys", function(state)
+    if state then
+        _G.on = true
+        while _G.on do
+            wait()
+            local args = {
+                [1] = "Hand Yellow"
+            }
+            
+            game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args))
+        end
+    else
+        _G.on = false
+    end
+end)
+Section:NewToggle("auto buys Hand Green", "auto buys", function(state)
+    if state then
+        _G.on = true
+        while _G.on do
+            wait()
+            local args = {
+                [1] = " Hand Green"
+            }
+            
+            game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args))
+        end
+    else
+        _G.on = false
+    end
+end)
+Section:NewToggle("auto buy Hand Black", "auto buys", function(state)
+    if state then
+        _G.on = true
+        while _G.on do
+            wait()
+            local args = {
+                [1] = "Hand Black"
+            }
+            
+            game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args))
+        end
+    else
+        _G.on = false
+    end
+end) 
+Section:NewToggle("auto buy Hand Rainbow", "auto buys", function(state)
+    if state then
+        _G.on = true
+        while _G.on do
+            wait()
+            local args = {
+                [1] = "Hand Rainbow"
+            }
+            
+            game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args))
+        end
+    else
+        _G.on = false
+    end
+end)
 
 local Tab = Window:NewTab("Credits")
 
