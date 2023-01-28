@@ -801,13 +801,19 @@ local Section = Tab:NewSection("Zombie Attack")
 
 Section:NewButton("Zombie Attack Gui", "Ehe", function()
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Emoli5/Shadow-/main/Teen"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/anisnouacer1/My-Roblox-Scripts/main/Zombie%20Attack.lua"))()
+
+end)
+ 
+local Section = Tab:NewSection("Sky Wars")
+
+Section:NewButton("Sky Wars Gui", "Ehe", function()
+
+loadstring(game:HttpGet("https://paste.ee/r/r9gnA", true))()
 
 end) 
 
 local Section = Tab:NewSection("coming soon...")
-
-
 
 
 local Tab = Window:NewTab("Admin")
