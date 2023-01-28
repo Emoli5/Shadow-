@@ -1,766 +1,353 @@
-game.StarterGui:SetCore("SendNotification", {
-    Title = "Subscribe To arya";
-    Text = "Subscribe For More Scripts"; -- what the text says (ofc)
-    Duration = 60;
-})
-  
- 
-local ScreenGui = Instance.new("ScreenGui")
-local main = Instance.new("Frame")
-local label = Instance.new("TextLabel")
-local Fly = Instance.new("TextButton")
-local Gamepass = Instance.new("TextButton")
-local Hitbox = Instance.new("TextButton")
-local VisualGUI = Instance.new("TextButton")
-local Serverbrows = Instance.new("TextButton")
- 
---Properties:
- 
-ScreenGui.Parent = game.CoreGui
- 
-main.Name = "main"
-main.Parent = ScreenGui
-main.BackgroundColor3 = Color3.fromRGB(83, 0, 0)
-main.Position = UDim2.new(0.37264958, 0, 0.298742145, 0)
-main.Size = UDim2.new(0, 311, 0, 322)
-main.Active = true
-main.Draggable = true
- 
-label.Name = "label"
-label.Parent = main
-label.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-label.Size = UDim2.new(0, 311, 0, 50)
-label.Font = Enum.Font.SourceSans
-label.Text = "teens titan gui remastered"
-label.TextColor3 = Color3.fromRGB(254, 0, 0)
-label.TextScaled = true
-label.TextSize = 14.000
-label.TextWrapped = true
- 
-Fly.Name = "Fly"
-Fly.Parent = main
-Fly.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-Fly.Position = UDim2.new(0.109335542, 0, 0.343487412, 0)
-Fly.Size = UDim2.new(0, 126, 0, 49)
-Fly.Font = Enum.Font.SourceSans
-Fly.Text = "first"
-Fly.TextColor3 = Color3.fromRGB(0, 0, 0)
-Fly.TextSize = 40.000
-Fly.MouseButton1Down:connect(function()
-		local noclip = true char = game.Players.LocalPlayer.Character while true do if noclip == true then for _,v in pairs(char:children()) do pcall(function() if v.className == "Part" then v.CanCollide = false elseif v.ClassName == "Model" then v.Head.CanCollide = false end end) end end game:service("RunService").Stepped:wait() end
- 
-end)
- 
-Gamepass.Name = "Gamepass"
-Gamepass.Parent = main
-Gamepass.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-Gamepass.Position = UDim2.new(0.562711716, 0, 0.343487412, 0)
-Gamepass.Size = UDim2.new(0, 126, 0, 49)
-Gamepass.Font = Enum.Font.SourceSans
-Gamepass.Text = "fly wait unfreeze"
-Gamepass.TextColor3 = Color3.fromRGB(0, 0, 0)
-Gamepass.TextSize = 30.000
-Gamepass.MouseButton1Down:connect(function()
-	--ARCEUS X FLY V2 SCRIPT BY me_ozoneYT
-	loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+--Made by 17K_ShadowInf--
+--Owner; 17K_Shadow--
+--Open Source--
 
-end)
- 
-Hitbox.Name = "Hitbox"
-Hitbox.Parent = main
-Hitbox.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-Hitbox.Position = UDim2.new(0.109335512, 0, 0.681722701, 0)
-Hitbox.Size = UDim2.new(0, 126, 0, 49)
-Hitbox.Font = Enum.Font.SourceSans
-Hitbox.Text = "second"
-Hitbox.TextColor3 = Color3.fromRGB(0, 0, 0)
-Hitbox.TextSize = 40.000
-Hitbox.MouseButton1Down:connect(function()
-	_G.HeadSize = 2000
- 
-	_G.Disabled = true
- 
-	game:GetService('RunService').RenderStepped:connect(function()
-		if _G.Disabled then
-			for i,v in next, game:GetService('Players'):GetPlayers() do
-				if v.Name ~= game:GetService('Players').LocalPlayer.Name then
-					pcall(function()
-						v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
-						v.Character.HumanoidRootPart.Transparency = 0.7
-						v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
-						v.Character.HumanoidRootPart.Material = "Neon"
-						v.Character.HumanoidRootPart.CanCollide = false
-					end)
-				end
-			end
+local CoreGui = game:GetService("StarterGui") -- Variable of StarterGui
+CoreGui:SetCore("SendNotification", {
+    Title = "Zombie Attack",
+    Text = "Lets Kill Some Zombie",
+    Duration = 8, 
+})
+
+game:GetService("StarterGui"):SetCore("SendNotification",{ 	
+Title = "Made By:",  	
+Text = "17K_ShadowInf,
+	Icon = "rbxthumb://type=Asset&id=9863339777&w=150&h=150",
+	Duration = 5
+})
+
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+local Window = Library.CreateLib("17K_Shadow | Zombie Attack | V1.1")
+
+
+local Tab = Window:NewTab("Main")
+local a = Tab:NewSection("Main Or Combat")
+local Weapons = Window:NewTab("Mod Gun")
+local b = Weapons:NewSection("Guns are More OverPower")
+local Visual = Window:NewTab("Visual")
+local c = Visual:NewSection("See Things That nobody else can")
+local Player = Window:NewTab("Players")
+local d = Player:NewSection("Make Yourself Overpower")
+local Misc = Window:NewTab("Misc")
+local e = Misc:NewSection("Random Useful Stuff")
+local Credit = Window:NewTab("Credits")
+local f = Credit:NewSection("Credit: AdvancedFalling Team")
+local f = Credit:NewSection("YellowGreg, Wspboy12,  MMSVon")
+
+
+c:NewButton("Zombie Esp", "see zombie", function()
+local BillboardGui = Instance.new('BillboardGui') -- Makes Billboardgui
+local TextLabel = Instance.new('TextLabel',BillboardGui)
+
+BillboardGui.Name = "esp"
+BillboardGui.AlwaysOnTop = true -- if its on top or not
+BillboardGui.Size = UDim2.new(0, 50, 0, 50) -- size of it
+BillboardGui.StudsOffset = Vector3.new(0,0,0)
+
+TextLabel.BackgroundTransparency = 1 -- transparency
+TextLabel.Size = UDim2.new(3, 5, 3, 5) -- size
+TextLabel.TextColor3 = Color3.new(1, 0, 0) -- color
+TextLabel.TextScaled = false -- if the text is scaled or not
+game:GetService("RunService").RenderStepped:Connect(function()
+	for i,v in pairs(game.Workspace.enemies:GetDescendants()) do
+		if v.Parent.Name == "HumanoidRootPart" and v.Parent:FindFirstChild("esp")==nil  then
+			TextLabel.Text = v.Parent.Parent.Name
+			BillboardGui:Clone().Parent = v.Parent
 		end
-	end)
- 
+	end
 end)
- 
-VisualGUI.Name = "VisualGUI"
-VisualGUI.Parent = main
-VisualGUI.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-VisualGUI.Position = UDim2.new(0.562711716, 0, 0.681722701, 0)
-VisualGUI.Size = UDim2.new(0, 126, 0, 49)
-VisualGUI.Font = Enum.Font.SourceSans
-VisualGUI.Text = "speed tool"
-VisualGUI.TextColor3 = Color3.fromRGB(0, 0, 0)
-VisualGUI.TextSize = 30.000
-VisualGUI.MouseButton1Down:connect(function()
---Made By Raspyredstoner
-mouse = game.Players.LocalPlayer:GetMouse()
-tool = Instance.new("Tool")
-tool.RequiresHandle = false
-tool.Name = "Click To Speed Up"
-tool.Activated:connect(function()
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
-end)
-tool.Parent = game.Players.LocalPlayer.Backpack
-
 end)
 
-Serverbrows.Name = "Serverbrows"
-Serverbrows.Parent = main
-Serverbrows.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
-Serverbrows.Position = UDim2.new(0.340835989, 0, 0.195652157, 0)
-Serverbrows.Size = UDim2.new(0, 136, 0, 35)
-Serverbrows.Font = Enum.Font.SourceSans
-Serverbrows.Text = "another gui"
-Serverbrows.TextColor3 = Color3.fromRGB(0, 0, 0)
-Serverbrows.TextSize = 27.000
-Serverbrows.MouseButton1Down:connect(function()
- game.StarterGui:SetCore("SendNotification", {
-    Title = "Subscribe To arya";
-    Text = "Subscribe For More Scripts"; -- what the text says (ofc)
-    Duration = 60;
-})
- 
- 
-local ScreenGui = Instance.new("ScreenGui")
-local main = Instance.new("Frame")
-local label = Instance.new("TextLabel")
-local Fly = Instance.new("TextButton")
-local Gamepass = Instance.new("TextButton")
-local Hitbox = Instance.new("TextButton")
-local VisualGUI = Instance.new("TextButton")
-local Serverbrows = Instance.new("TextButton")
- 
---Properties:
- 
-ScreenGui.Parent = game.CoreGui
- 
-main.Name = "main"
-main.Parent = ScreenGui
-main.BackgroundColor3 = Color3.fromRGB(83, 0, 0)
-main.Position = UDim2.new(0.37264958, 0, 0.298742145, 0)
-main.Size = UDim2.new(0, 311, 0, 322)
-main.Active = true
-main.Draggable = true
- 
-label.Name = "label"
-label.Parent = main
-label.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-label.Size = UDim2.new(0, 311, 0, 50)
-label.Font = Enum.Font.SourceSans
-label.Text = "all fighting game GUI"
-label.TextColor3 = Color3.fromRGB(254, 0, 0)
-label.TextScaled = true
-label.TextSize = 14.000
-label.TextWrapped = true
- 
-Fly.Name = "Fly"
-Fly.Parent = main
-Fly.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-Fly.Position = UDim2.new(0.109335542, 0, 0.343487412, 0)
-Fly.Size = UDim2.new(0, 126, 0, 49)
-Fly.Font = Enum.Font.SourceSans
-Fly.Text = "inf jump"
-Fly.TextColor3 = Color3.fromRGB(0, 0, 0)
-Fly.TextSize = 40.000
-Fly.MouseButton1Down:connect(function()
---Subscribe To ArceusMODZ--
 
+b:NewButton("Equip All Guns", "Idk what to put here", function()
+for _,Thing in pairs(game.ReplicatedStorage.Guns:GetChildren()) do
+if Thing:IsA("Tool") then
+Thing.Parent = game.Players.LocalPlayer.Backpack
+end
+end
+end)
+
+b:NewButton("Equip All Knife", "idk", function()
+for _,Thing in pairs(game.ReplicatedStorage.Knives:GetChildren()) do
+if Thing:IsA("Tool") then
+Thing.Parent = game.Players.LocalPlayer.Backpack
+end
+end
+end)
+
+b:NewButton("Btools", "It kinda a weapon but does not hurt", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/T0qaXjAR", true))()
+end)
+
+d:NewButton("Infinite Jump", "Jump Without Getting Stopped in Mid Air", function()
 local InfiniteJumpEnabled = true
 game:GetService("UserInputService").JumpRequest:connect(function()
 	if InfiniteJumpEnabled then
 		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
 	end
 end)
- 
 end)
- 
-Gamepass.Name = "Gamepass"
-Gamepass.Parent = main
-Gamepass.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-Gamepass.Position = UDim2.new(0.562711716, 0, 0.343487412, 0)
-Gamepass.Size = UDim2.new(0, 126, 0, 49)
-Gamepass.Font = Enum.Font.SourceSans
-Gamepass.Text = "auto clicker"
-Gamepass.TextColor3 = Color3.fromRGB(0, 0, 0)
-Gamepass.TextSize = 30.000
-Gamepass.MouseButton1Down:connect(function()
---Subscribe To ArceusMODZ--
--- If Any Error Happened Let me Know--
 
---// Setting \--
-local range = 1000
+d:NewButton("Gravity", "Yea float like in the moon", function()
+game.Workspace.Gravity = 3
+end)
 
---// Variable \--
-local player = game:GetService("Players").LocalPlayer
-
---// Script \--
-game:GetService("RunService").RenderStepped:Connect(function()
-    local p = game.Players:GetPlayers()
-    for i = 2, #p do local v = p[i].Character
-        if v and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 and v:FindFirstChild("HumanoidRootPart") and player:DistanceFromCharacter(v.HumanoidRootPart.Position) <= range then
-            local tool = player.Character and player.Character:FindFirstChildOfClass("Tool")
-            if tool and tool:FindFirstChild("Handle") then
-                tool:Activate()
-                for i,v in next, v:GetChildren() do
-                    if v:IsA("BasePart") then
-                        firetouchinterest(tool.Handle,v,0)
-                        firetouchinterest(tool.Handle,v,1)
-                    end
-                end
-            end
-        end
+a:NewToggle("WallBang", "bruh", nil, function(State)
+getgenv().WALLBANG = State
+local OldNameCall = nil
+OldNameCall = hookmetamethod(game, "__namecall", function(self, ...)
+  local Args = {...}
+    if getnamecallmethod() == "FindPartOnRayWithIgnoreList" and getgenv().WALLBANG then
+       table.insert(Args[2], workspace.map)
     end
+    return OldNameCall(self, ...)
+end) 
+end)
+a:NewButton("Wallbang(Newer Version)", "BRUH", function()
+getgenv().Wallbang = true
+
+-- normal patched wallbang
+
+local mt = getrawmetatable(game)
+local namecallold = mt.__namecall
+setreadonly(mt, false)
+mt.__namecall = newcclosure(function(self, ...)
+    local Args = {...}
+    NamecallMethod = getnamecallmethod()
+    if getgenv().Wallbang and tostring(NamecallMethod) == "FindPartOnRayWithIgnoreList" then
+        table.insert(Args[2], workspace.Map)
+    end
+    return namecallold(self, ...)
+end)
+-- WALLBANG BYPASS
+loadstring(game:HttpGet("https://pastebin.pl/view/raw/93ee6b4f", true))() -- credits to bolts and the 3 bakers and Finny for this
+setreadonly(mt, true)
+end)		
+a:NewButton("Kill Platforms", "idk ok", function()
+plr = game:service'Players'.LocalPlayer
+char = plr.Character
+root = char.HumanoidRootPart
+iszombie = false
+ 
+platform = Instance.new('Part', workspace)
+platform.Size = Vector3.new(100,0,100)
+platform.Anchored = true
+platform.Position = Vector3.new(555,555,555)
+root.CFrame = platform.CFrame * CFrame.new(0,4,0)
+ 
+if workspace:FindFirstChild(plr.Name) then
+   iszombie = false
+   warn'You are not a zombie!'
+else
+   iszombie = true
+   warn'You are a zombie!'
+end
+ 
+wait(.5)
+ 
+if not iszombie then
+   for _, a in pairs(workspace.enemies:children()) do
+       for _, b in pairs(a:children()) do
+           if b:IsA'Part' then
+               b.Anchored = true
+               b.CFrame = root.CFrame * CFrame.new(2,0,2)
+           end
+       end
+   end
+elseif iszombie then
+   for _, a in pairs(game:service'Players':GetPlayers()) do
+       if a.Character then
+           for _, b in pairs(a.Character:children()) do
+               if b:IsA'Part' and a.Name ~= plr.Name then
+                   b.Anchored = true
+                   b.CFrame =  root.CFrame * CFrame.new(2,0,2)
+               end
+           end
+       end
+   end
+end
 end)
 
-end)
- 
-Hitbox.Name = "Hitbox"
-Hitbox.Parent = main
-Hitbox.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-Hitbox.Position = UDim2.new(0.109335512, 0, 0.681722701, 0)
-Hitbox.Size = UDim2.new(0, 126, 0, 49)
-Hitbox.Font = Enum.Font.SourceSans
-Hitbox.Text = "hitbox"
-Hitbox.TextColor3 = Color3.fromRGB(0, 0, 0)
-Hitbox.TextSize = 40.000
-Hitbox.MouseButton1Down:connect(function()
-	_G.HeadSize = 20
- 
-	_G.Disabled = true
- 
-	game:GetService('RunService').RenderStepped:connect(function()
-		if _G.Disabled then
-			for i,v in next, game:GetService('Players'):GetPlayers() do
-				if v.Name ~= game:GetService('Players').LocalPlayer.Name then
-					pcall(function()
-						v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
-						v.Character.HumanoidRootPart.Transparency = 0.7
-						v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
-						v.Character.HumanoidRootPart.Material = "Neon"
-						v.Character.HumanoidRootPart.CanCollide = false
-					end)
-				end
-			end
-		end
-	end)
- 
-end)
- 
-VisualGUI.Name = "VisualGUI"
-VisualGUI.Parent = main
-VisualGUI.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-VisualGUI.Position = UDim2.new(0.562711716, 0, 0.681722701, 0)
-VisualGUI.Size = UDim2.new(0, 126, 0, 49)
-VisualGUI.Font = Enum.Font.SourceSans
-VisualGUI.Text = "shiftlock"
-VisualGUI.TextColor3 = Color3.fromRGB(0, 0, 0)
-VisualGUI.TextSize = 30.000
-VisualGUI.MouseButton1Down:connect(function()
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
-local ShiftlockStarterGui = Instance.new("ScreenGui")
-local ImageButton = Instance.new("ImageButton")
-
---Properties:
-
-ShiftlockStarterGui.Name = "Shiftlock (StarterGui)"
-ShiftlockStarterGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ShiftlockStarterGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-ImageButton.Parent = ShiftlockStarterGui
-ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageButton.BackgroundTransparency = 1.000
-ImageButton.Position = UDim2.new(0.921914339, 0, 0.552375436, 0)
-ImageButton.Size = UDim2.new(0.0636147112, 0, 0.0661305636, 0)
-ImageButton.SizeConstraint = Enum.SizeConstraint.RelativeXX
-ImageButton.Image = "http://www.roblox.com/asset/?id=182223762"
-
--- Scripts:
-
-local function TLQOYN_fake_script() -- ImageButton.ShiftGUI 
-	local script = Instance.new('LocalScript', ImageButton)
-
-	local MobileCameraFramework = {}
-	local players = game:GetService("Players")
-	local runservice = game:GetService("RunService")
-	local CAS = game:GetService("ContextActionService")
-	local player = players.LocalPlayer
-	local character = player.Character or player.CharacterAdded:Wait()
-	local root = character:WaitForChild("HumanoidRootPart")
-	local humanoid = character.Humanoid
-	local camera = workspace.CurrentCamera
-	local button = script.Parent
-	
-	--Visiblity
-	uis = game:GetService("UserInputService")
-	ismobile = uis.TouchEnabled
-	button.Visible = ismobile
-	
-	local states = {
-		OFF = "rbxasset://textures/ui/mouseLock_off@2x.png",
-		ON = "rbxasset://textures/ui/mouseLock_on@2x.png"
-	}
-	local MAX_LENGTH = 900000
-	local active = false
-	local ENABLED_OFFSET = CFrame.new(1.7, 0, 0)
-	local DISABLED_OFFSET = CFrame.new(-1.7, 0, 0)
-	local function UpdateImage(STATE)
-		button.Image = states[STATE]
-	end
-	local function UpdateAutoRotate(BOOL)
-		humanoid.AutoRotate = BOOL
-	end
-	local function GetUpdatedCameraCFrame(ROOT, CAMERA)
-		return CFrame.new(root.Position, Vector3.new(CAMERA.CFrame.LookVector.X * MAX_LENGTH, root.Position.Y, CAMERA.CFrame.LookVector.Z * MAX_LENGTH))
-	end
-	local function EnableShiftlock()
-		UpdateAutoRotate(false)
-		UpdateImage("ON")
-		root.CFrame = GetUpdatedCameraCFrame(root, camera)
-		camera.CFrame = camera.CFrame * ENABLED_OFFSET
-	end
-	local function DisableShiftlock()
-		UpdateAutoRotate(true)
-		UpdateImage("OFF")
-		camera.CFrame = camera.CFrame * DISABLED_OFFSET
-		pcall(function()
-			active:Disconnect()
-			active = nil
-		end)
-	end
-	UpdateImage("OFF")
-	active = false
-	function ShiftLock()
-		if not active then
-			active = runservice.RenderStepped:Connect(function()
-				EnableShiftlock()
-			end)
-		else
-			DisableShiftlock()
-		end
-	end
-	local ShiftLockButton = CAS:BindAction("ShiftLOCK", ShiftLock, false, "On")
-	CAS:SetPosition("ShiftLOCK", UDim2.new(0.8, 0, 0.8, 0))
-	button.MouseButton1Click:Connect(function()
-		if not active then
-			active = runservice.RenderStepped:Connect(function()
-				EnableShiftlock()
-			end)
-		else
-			DisableShiftlock()
-		end
-	end)
-	return MobileCameraFramework
-	
-end
-coroutine.wrap(TLQOYN_fake_script)()
-local function OMQRQRC_fake_script() -- ShiftlockStarterGui.LocalScript 
-	local script = Instance.new('LocalScript', ShiftlockStarterGui)
-
-	local Players = game:GetService("Players")
-	local UserInputService = game:GetService("UserInputService")
-	local Settings = UserSettings()
-	local GameSettings = Settings.GameSettings
-	local ShiftLockController = {}
-	while not Players.LocalPlayer do
-		wait()
-	end
-	local LocalPlayer = Players.LocalPlayer
-	local Mouse = LocalPlayer:GetMouse()
-	local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
-	local ScreenGui, ShiftLockIcon, InputCn
-	local IsShiftLockMode = true
-	local IsShiftLocked = true
-	local IsActionBound = false
-	local IsInFirstPerson = false
-	ShiftLockController.OnShiftLockToggled = Instance.new("BindableEvent")
-	local function isShiftLockMode()
-		return LocalPlayer.DevEnableMouseLock and GameSettings.ControlMode == Enum.ControlMode.MouseLockSwitch and LocalPlayer.DevComputerMovementMode ~= Enum.DevComputerMovementMode.ClickToMove and GameSettings.ComputerMovementMode ~= Enum.ComputerMovementMode.ClickToMove and LocalPlayer.DevComputerMovementMode ~= Enum.DevComputerMovementMode.Scriptable
-	end
-	if not UserInputService.TouchEnabled then
-		IsShiftLockMode = isShiftLockMode()
-	end
-	local function onShiftLockToggled()
-		IsShiftLocked = not IsShiftLocked
-		ShiftLockController.OnShiftLockToggled:Fire()
-	end
-	local initialize = function()
-		print("enabled")
-	end
-	function ShiftLockController:IsShiftLocked()
-		return IsShiftLockMode and IsShiftLocked
-	end
-	function ShiftLockController:SetIsInFirstPerson(isInFirstPerson)
-		IsInFirstPerson = isInFirstPerson
-	end
-	local function mouseLockSwitchFunc(actionName, inputState, inputObject)
-		if IsShiftLockMode then
-			onShiftLockToggled()
-		end
-	end
-	local function disableShiftLock()
-		if ScreenGui then
-			ScreenGui.Parent = nil
-		end
-		IsShiftLockMode = false
-		Mouse.Icon = ""
-		if InputCn then
-			InputCn:disconnect()
-			InputCn = nil
-		end
-		IsActionBound = false
-		ShiftLockController.OnShiftLockToggled:Fire()
-	end
-	local onShiftInputBegan = function(inputObject, isProcessed)
-		if isProcessed then
-			return
-		end
-		if inputObject.UserInputType ~= Enum.UserInputType.Keyboard or inputObject.KeyCode == Enum.KeyCode.LeftShift or inputObject.KeyCode == Enum.KeyCode.RightShift then
-		end
-	end
-	local function enableShiftLock()
-		IsShiftLockMode = isShiftLockMode()
-		if IsShiftLockMode then
-			if ScreenGui then
-				ScreenGui.Parent = PlayerGui
-			end
-			if IsShiftLocked then
-				ShiftLockController.OnShiftLockToggled:Fire()
-			end
-			if not IsActionBound then
-				InputCn = UserInputService.InputBegan:connect(onShiftInputBegan)
-				IsActionBound = true
-			end
-		end
-	end
-	GameSettings.Changed:connect(function(property)
-		if property == "ControlMode" then
-			if GameSettings.ControlMode == Enum.ControlMode.MouseLockSwitch then
-				enableShiftLock()
-			else
-				disableShiftLock()
-			end
-		elseif property == "ComputerMovementMode" then
-			if GameSettings.ComputerMovementMode == Enum.ComputerMovementMode.ClickToMove then
-				disableShiftLock()
-			else
-				enableShiftLock()
-			end
-		end
-	end)
-	LocalPlayer.Changed:connect(function(property)
-		if property == "DevEnableMouseLock" then
-			if LocalPlayer.DevEnableMouseLock then
-				enableShiftLock()
-			else
-				disableShiftLock()
-			end
-		elseif property == "DevComputerMovementMode" then
-			if LocalPlayer.DevComputerMovementMode == Enum.DevComputerMovementMode.ClickToMove or LocalPlayer.DevComputerMovementMode == Enum.DevComputerMovementMode.Scriptable then
-				disableShiftLock()
-			else
-				enableShiftLock()
-			end
-		end
-	end)
-	LocalPlayer.CharacterAdded:connect(function(character)
-		if not UserInputService.TouchEnabled then
-			initialize()
-		end
-	end)
-	if not UserInputService.TouchEnabled then
-		initialize()
-		if isShiftLockMode() then
-			InputCn = UserInputService.InputBegan:connect(onShiftInputBegan)
-			IsActionBound = true
-		end
-	end
-	enableShiftLock()
-	return ShiftLockController
-	
-end
-coroutine.wrap(OMQRQRC_fake_script)()
-
+a:NewButton("GodMode(Updated)","The local Player Will Be Invincible",function()
+game.Players.LocalPlayer.Character.Humanoid:Remove()
+Instance.new('Humanoid', game.Players.LocalPlayer.Character)
+game:GetService("Workspace")[game.Players.LocalPlayer.Name]:FindFirstChildOfClass(
+'Humanoid').HipHeight = 2
 end)
 
-Serverbrows.Name = "Serverbrows"
-Serverbrows.Parent = main
-Serverbrows.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
-Serverbrows.Position = UDim2.new(0.340835989, 0, 0.195652157, 0)
-Serverbrows.Size = UDim2.new(0, 136, 0, 35)
-Serverbrows.Font = Enum.Font.SourceSans
-Serverbrows.Text = "esp gui"
-Serverbrows.TextColor3 = Color3.fromRGB(0, 0, 0)
-Serverbrows.TextSize = 27.000
-Serverbrows.MouseButton1Down:connect(function()
--- press v to use aimbot and press q to disable aimbot
-loadstring(game:HttpGet("https://pastebin.com/raw/uw2P2fbY", true))()
+a:NewButton("Silent Aim", "Not Trying To be Suspicious lol", function()
+local oPlBfNRNfyJz = game.Players.LocalPlayer;local ZtYjkXDgMlxc = "Head";local dAociCiEvJMB = function()local QInaUnazu = math.huge;local J8IhabzuN = nil;for iUIhaztYUbnZ,uUhsabzyuG in next, game.Workspace:GetDescendants() do if uUhsabzyuG:FindFirstChild(ZtYjkXDgMlxc) and oPlBfNRNfyJz.Character:FindFirstChild(ZtYjkXDgMlxc) and not uUhsabzyuG:FindFirstChild('Guns') and uUhsabzyuG.Parent.Name ~= "deadenemies" then local IIhzabUtd = (uUhsabzyuG:FindFirstChild(ZtYjkXDgMlxc).Position-oPlBfNRNfyJz.Character.Head.Position).magnitude;if IIhzabUtd < QInaUnazu then QInaUnazu = IIhzabUtd;J8IhabzuN = uUhsabzyuG;end;end;end;return J8IhabzuN;end;local GtsZsUbJOuJk = oPlBfNRNfyJz:GetMouse();local tZcInsImQQfX = getrawmetatable(game);local sCtxkbklLnmy = tZcInsImQQfX.__index;setreadonly(tZcInsImQQfX,false);tZcInsImQQfX.__index = newcclosure(function(hFcjBtZBXthW,tGNxqMIMabVS)if hFcjBtZBXthW == GtsZsUbJOuJk and tostring(tGNxqMIMabVS) == "Hit" then return dAociCiEvJMB():FindFirstChild(ZtYjkXDgMlxc).CFrame;end;return sCtxkbklLnmy(hFcjBtZBXthW,tGNxqMIMabVS)end)setreadonly(tZcInsImQQfX,true)
+end)
 
-PLAYER  = game.Players.LocalPlayer
-MOUSE   = PLAYER:GetMouse()
-CC      = game.Workspace.CurrentCamera
-
-ENABLED      = false
-ESP_ENABLED  = false
-
-_G.FREE_FOR_ALL = false
-
-_G.BIND        = 118
-_G.ESP_BIND    = 49
-_G.CHANGE_AIM  = 'q'
-
-_G.AIM_AT = 'Head'
-
-wait(1)
-
-function GetNearestPlayerToMouse()
-local PLAYERS      = {}
-local PLAYER_HOLD  = {}
-local DISTANCES    = {}
-for i, v in pairs(game.Players:GetPlayers()) do
-if v ~= PLAYER then
-table.insert(PLAYERS, v)
+a:NewButton("Extended Hitbox", "Big Hitbox in blue", function()
+_G.HeadSize = 25
+local enemies = workspace.enemies
+while wait() do
+  for _,v in next, enemies:GetChildren() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+       v.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+     v.HumanoidRootPart.Material = "Neon"
+       v.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
+       v.HumanoidRootPart.Transparency = 0.7
+       v.HumanoidRootPart.CanCollide = false
+end)
 end
+  end
 end
-for i, v in pairs(PLAYERS) do
-if _G.FREE_FOR_ALL == false then
-if v and (v.Character) ~= nil and v.TeamColor ~= PLAYER.TeamColor then
-local AIM = v.Character:FindFirstChild(_G.AIM_AT)
-if AIM ~= nil then
-local DISTANCE                 = (AIM.Position - game.Workspace.CurrentCamera.CoordinateFrame.p).magnitude
-local RAY                      = Ray.new(game.Workspace.CurrentCamera.CoordinateFrame.p, (MOUSE.Hit.p - CC.CoordinateFrame.p).unit * DISTANCE)
-local HIT,POS                  = game.Workspace:FindPartOnRay(RAY, game.Workspace)
-local DIFF                     = math.floor((POS - AIM.Position).magnitude)
-PLAYER_HOLD[v.Name .. i]       = {}
-PLAYER_HOLD[v.Name .. i].dist  = DISTANCE
-PLAYER_HOLD[v.Name .. i].plr   = v
-PLAYER_HOLD[v.Name .. i].diff  = DIFF
-table.insert(DISTANCES, DIFF)
-end
-end
-elseif _G.FREE_FOR_ALL == true then
-local AIM = v.Character:FindFirstChild(_G.AIM_AT)
-if AIM ~= nil then
-local DISTANCE                 = (AIM.Position - game.Workspace.CurrentCamera.CoordinateFrame.p).magnitude
-local RAY                      = Ray.new(game.Workspace.CurrentCamera.CoordinateFrame.p, (MOUSE.Hit.p - CC.CoordinateFrame.p).unit * DISTANCE)
-local HIT,POS                  = game.Workspace:FindPartOnRay(RAY, game.Workspace)
-local DIFF                     = math.floor((POS - AIM.Position).magnitude)
-PLAYER_HOLD[v.Name .. i]       = {}
-PLAYER_HOLD[v.Name .. i].dist  = DISTANCE
-PLAYER_HOLD[v.Name .. i].plr   = v
-PLAYER_HOLD[v.Name .. i].diff  = DIFF
-table.insert(DISTANCES, DIFF)
+end)
+
+a:NewButton("AutoFarm","It Will Instantly start killing zombies",function()
+local groundDistance = 8
+local Player = game:GetService("Players").LocalPlayer
+local function getNearest()
+local nearest, dist = nil, 99999
+for _,v in pairs(game.Workspace.BossFolder:GetChildren()) do
+if(v:FindFirstChild("Head")~=nil)then
+local m =(Player.Character.Head.Position-v.Head.Position).magnitude
+if(m<dist)then
+dist = m
+nearest = v
 end
 end
 end
-
-if unpack(DISTANCES) == nil then
-return false
-end
-
-local L_DISTANCE = math.floor(math.min(unpack(DISTANCES)))
-if L_DISTANCE > 20 then
-return false
-end
-
-for i, v in pairs(PLAYER_HOLD) do
-if v.diff == L_DISTANCE then
-return v.plr
-end
-end
-return false
-end
-
-GUI_MAIN                           = Instance.new('ScreenGui', game.CoreGui)
-GUI_TARGET                         = Instance.new('TextLabel', GUI_MAIN)
-GUI_AIM_AT                         = Instance.new('TextLabel', GUI_MAIN)
-
-GUI_MAIN.Name                      = 'AIMBOT'
-
-GUI_TARGET.Size                    = UDim2.new(0,200,0,30)
-GUI_TARGET.BackgroundTransparency  = 0.5
-GUI_TARGET.BackgroundColor         = BrickColor.new('Fossil')
-GUI_TARGET.BorderSizePixel         = 0
-GUI_TARGET.Position                = UDim2.new(0.5,-100,0,0)
-GUI_TARGET.Text                    = 'AIMBOT : OFF'
-GUI_TARGET.TextColor3              = Color3.new(1,1,1)
-GUI_TARGET.TextStrokeTransparency  = 1
-GUI_TARGET.TextWrapped             = true
-GUI_TARGET.FontSize                = 'Size24'
-GUI_TARGET.Font                    = 'SourceSansBold'
-
-GUI_AIM_AT.Size                    = UDim2.new(0,200,0,20)
-GUI_AIM_AT.BackgroundTransparency  = 0.5
-GUI_AIM_AT.BackgroundColor         = BrickColor.new('Fossil')
-GUI_AIM_AT.BorderSizePixel         = 0
-GUI_AIM_AT.Position                = UDim2.new(0.5,-100,0,30)
-GUI_AIM_AT.Text                    = 'AIMING : HEAD'
-GUI_AIM_AT.TextColor3              = Color3.new(1,1,1)
-GUI_AIM_AT.TextStrokeTransparency  = 1
-GUI_AIM_AT.TextWrapped             = true
-GUI_AIM_AT.FontSize                = 'Size18'
-GUI_AIM_AT.Font                    = 'SourceSansBold'
-
-local TRACK = false
-
-function CREATE(BASE, TEAM)
-local ESP_MAIN                   = Instance.new('BillboardGui', PLAYER.PlayerGui)
-local ESP_DOT                    = Instance.new('Frame', ESP_MAIN)
-local ESP_NAME                   = Instance.new('TextLabel', ESP_MAIN)
-
-ESP_MAIN.Name                    = 'ESP'
-ESP_MAIN.Adornee                 = BASE
-ESP_MAIN.AlwaysOnTop             = true
-ESP_MAIN.ExtentsOffset           = Vector3.new(0, 1, 0)
-ESP_MAIN.Size                    = UDim2.new(0, 5, 0, 5)
-
-ESP_DOT.Name                     = 'DOT'
-ESP_DOT.BackgroundColor          = BrickColor.new('Bright red')
-ESP_DOT.BackgroundTransparency   = 0.3
-ESP_DOT.BorderSizePixel          = 0
-ESP_DOT.Position                 = UDim2.new(-0.5, 0, -0.5, 0)
-ESP_DOT.Size                     = UDim2.new(2, 0, 2, 0)
-ESP_DOT.Visible                  = true
-ESP_DOT.ZIndex                   = 10
-
-ESP_NAME.Name                    = 'NAME'
-ESP_NAME.BackgroundColor3        = Color3.new(255, 255, 255)
-ESP_NAME.BackgroundTransparency  = 1
-ESP_NAME.BorderSizePixel         = 0
-ESP_NAME.Position                = UDim2.new(0, 0, 0, -40)
-ESP_NAME.Size                    = UDim2.new(1, 0, 10, 0)
-ESP_NAME.Visible                 = true
-ESP_NAME.ZIndex                  = 10
-ESP_NAME.Font                    = 'ArialBold'
-ESP_NAME.FontSize                = 'Size14'
-ESP_NAME.Text                    = BASE.Parent.Name:upper()
-ESP_NAME.TextColor               = BrickColor.new('Bright red')
-end
-
-function CLEAR()
-for _,v in pairs(PLAYER.PlayerGui:children()) do
-if v.Name == 'ESP' and v:IsA('BillboardGui') then
-v:Destroy()
+for _,v in pairs(game.Workspace.enemies:GetChildren()) do
+if(v:FindFirstChild("Head")~=nil)then
+local m =(Player.Character.Head.Position-v.Head.Position).magnitude
+if(m<dist)then
+dist = m
+nearest = v
 end
 end
 end
-
-function FIND()
-CLEAR()
-TRACK = true
+return nearest
+end
+_G.farm2 = true
+Player.Chatted:Connect(function(m)
+if(m==";autofarm false")then
+_G.farm2 = false
+elseif(m==";autofarm true")then
+_G.farm2 = true
+end
+end)
+_G.globalTarget = nil
+game:GetService("RunService").RenderStepped:Connect(function()
+if(_G.farm2==true)then
+local target = getNearest()
+if(target~=nil)then
+game:GetService("Workspace").CurrentCamera.CFrame = CFrame.new(game:GetService("Workspace").CurrentCamera.CFrame.p, target.Head.Position)
+Player.Character.HumanoidRootPart.CFrame = (target.HumanoidRootPart.CFrame * CFrame.new(0, groundDistance, 9))
+_G.globalTarget = target
+end
+end
+end)
 spawn(function()
 while wait() do
-if TRACK then
-CLEAR()
-for i,v in pairs(game.Players:GetChildren()) do
-if v.Character and v.Character:FindFirstChild('Head') then
-if _G.FREE_FOR_ALL == false then
-if v.TeamColor ~= PLAYER.TeamColor then
-if v.Character:FindFirstChild('Head') then
-CREATE(v.Character.Head, true)
-end
-end
-else
-if v.Character:FindFirstChild('Head') then
-CREATE(v.Character.Head, true)
-end
-end
-end
-end
-end
-end
-wait(1)
-end)
-end
-
-MOUSE.KeyDown:connect(function(KEY)
-KEY = KEY:lower():byte()
-if KEY == _G.BIND then
-ENABLED = true
+game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)
+game.Players.LocalPlayer.Character.Torso.Velocity = Vector3.new(0,0,0)
 end
 end)
-
-MOUSE.KeyUp:connect(function(KEY)
-KEY = KEY:lower():byte()
-if KEY == _G.BIND then
-ENABLED = false
-end
-end)
-
-MOUSE.KeyDown:connect(function(KEY)
-KEY = KEY:lower():byte()
-if KEY == _G.ESP_BIND then
-if ESP_ENABLED == false then
-FIND()
-ESP_ENABLED = true
-print('ESP : ON')
-elseif ESP_ENABLED == true then
+while wait() do
+if(_G.farm2==true and _G.globalTarget~=nil and _G.globalTarget:FindFirstChild("Head") and Player.Character:FindFirstChildOfClass("Tool"))then
+local target = _G.globalTarget
+game.ReplicatedStorage.Gun:FireServer({["Normal"] = Vector3.new(0, 0, 0), ["Direction"] = target.Head.Position, ["Name"] = Player.Character:FindFirstChildOfClass("Tool").Name, ["Hit"] = target.Head, ["Origin"] = target.Head.Position, ["Pos"] = target.Head.Position,})
 wait()
-CLEAR()
-TRACK = false
-ESP_ENABLED = true
-print('ESP : OFF')
 end
 end
 end)
 
-MOUSE.KeyDown:connect(function(KEY)
-if KEY == _G.CHANGE_AIM then
-if _G.AIM_AT == 'Head' then
-_G.AIM_AT = 'Torso'
-GUI_AIM_AT.Text = 'AIMING : TORSO'
-elseif _G.AIM_AT == 'Torso' then
-_G.AIM_AT = 'Head'
-GUI_AIM_AT.Text = 'AIMING : HEAD'
-end
-end
+d:NewTextBox("Walkspeed","Changes the walkspeed", function(e)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed=e 
 end)
 
-game:GetService('RunService').RenderStepped:connect(function()
-if ENABLED then
-local TARGET = GetNearestPlayerToMouse()
-if (TARGET ~= false) then
-local AIM = TARGET.Character:FindFirstChild(_G.AIM_AT)
-if AIM then
-CC.CoordinateFrame = CFrame.new(CC.CoordinateFrame.p, AIM.CFrame.p)
-end
-GUI_TARGET.Text = 'AIMBOT : '.. TARGET.Name:sub(1, 5)
-else
-GUI_TARGET.Text = 'AIMBOT : OFF'
-end
-end
+d:NewTextBox("Jumppower","Changes the jumppower", function(e)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower=e 
 end)
 
-repeat
-wait()
-if ESP_ENABLED == true then
-FIND()
-end
-until ESP_ENABLED == false
-wait()
-_G.FREE_FOR_ALL = false
-_G.BIND = 118 -- LEFT ALT
-_G.ESP_BIND = 49 -- RIGHT CTRL
- 
+e:NewButton("Anti-AFK","BRRRR", function()
+		local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
- 
 end)
+
+e:NewButton("Anti-Lag", "No More lag", function()
+	for _, v in pairs(game:GetService("Workspace"):GetDescendants()) do
+    if v:IsA("BasePart") and not v.Parent:FindFirstChild("Humanoid") then
+        v.Material = Enum.Material.SmoothPlastic
+        if v:IsA("Texture") then
+            v:Destroy()
+        end
+    end
+end	
+end)		
+f:NewKeybind("Toggle", "Open", Enum.KeyCode.LeftControl, function()
+    Library:ToggleUI()
+end)
+
+f:NewButton("Copy Discord link", "Discord", function()
+setclipboard("https://discord.gg/MzeSqBBpCh")
+end)
+
+--Propertie--
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local Frame2 = Instance.new("Frame")
+local TextButton2 = Instance.new("TextButton")
+
+ScreenGui.Parent = game.CoreGui
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(0,255,0)
+Frame.Position = UDim2.new(0, 0, 0.40, 0)
+Frame.Size = UDim2.new(0, 90, 0, 30)
+Frame.Active = true
+Frame.Draggable = true
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(0,255,0)
+TextButton.Size = UDim2.new(0, 90, 0, 30)
+TextButton.Font = Enum.Font.GothamBold
+TextButton.Text = "OPEN"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 22.000
+TextButton.MouseButton1Click:connect(function()
+Frame.Visible = false
+Frame2.Visible = true    
+local vim = game:service("VirtualInputManager")
+vim:SendKeyEvent(true, "LeftControl", false, game)
+end)
+
+Frame2.Parent = ScreenGui
+Frame2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Frame2.Position = UDim2.new(0, 0, 0.40, 0)
+Frame2.Size = UDim2.new(0, 90, 0, 30)
+Frame2.Active = true
+Frame2.Draggable = true
+
+TextButton2.Parent = Frame2
+TextButton2.BackgroundColor3 = Color3.fromRGB(255,0,0)
+TextButton2.Size = UDim2.new(0, 90, 0, 30)
+TextButton2.Font = Enum.Font.GothamBold
+TextButton2.Text = "CLOSE"
+TextButton2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton2.TextSize = 22.000
+TextButton2.MouseButton1Click:connect(function()
+    Frame2.Visible = false
+    Frame.Visible = true
+local vim = game:service("VirtualInputManager")
+vim:SendKeyEvent(true, "LeftControl", false, game)
+end)
+
+
+
+
+
+Frame.Parent.Active = true
+Frame.Parent.Draggable = true
+
+
+---end--
