@@ -797,9 +797,17 @@ end)
 end)
 
 
+local Section = Tab:NewSection("Zombie Attack")
 
+Section:NewButton("Zombie Attack Gui", "Ehe", function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Emoli5/Shadow-/main/Teen"))()
+
+end) 
 
 local Section = Tab:NewSection("coming soon...")
+
+
 
 
 local Tab = Window:NewTab("Admin")
@@ -1085,7 +1093,7 @@ local Tab = Window:NewTab("Hand Auto Buys")
 
 local Section = Tab:NewSection("auto buys Hand")
 
-Section:NewToggle("auto buy Hand Yellow", "auto buys", function(state)
+Section:NewToggle("auto buy Dart", "auto buys", function(state)
     if state then
         _G.on = true
         while _G.on do
