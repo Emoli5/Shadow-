@@ -990,6 +990,20 @@ main.Visible = false
 end)
 -- Scripts:
 
+end)
+
+local Section = Tab:NewSection("Millionare Tycoon Empire")
+
+ 
+Section:NewButton("İnf Cash", "Ehe", function()
+
+local args = {
+    [1] = 288272000000032130
+}
+
+game:GetService("ReplicatedStorage").RespawnService:FireServer(unpack(args))
+
+
 end) 
 
 
