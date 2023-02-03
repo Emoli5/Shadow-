@@ -1301,7 +1301,7 @@ Main_:CreateButton("Slasher", "Slasher", "", "", "", "", function()
 	
 	end) 
 
-Section:NewButton("V Hub Key=KillYourself", "Troll", function() 
+Section:NewButton("Free Admin Troll", "Troll", function() 
 
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Veincx5315/Created/VHub/Simple'),true))()
 
