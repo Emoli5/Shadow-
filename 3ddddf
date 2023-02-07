@@ -1023,6 +1023,15 @@ end
 end) 
 
 
+local Section = Tab:NewSection("pop it trading dupe gui")
+
+Section:NewButton("dupe gui", "Ehe", function()
+
+_G.credits = "Credits to iShield. DISCORD SERVER INVITE LINK: https://discord.gg/x57Xk65xZs"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/iShield2005/scripts/master/shieldhubloader"))()
+
+end) 
+
 
 local Section = Tab:NewSection("coming soon...")
 
