@@ -372,7 +372,64 @@ end)
 
 Section:NewButton("no coldown", "c", function()
 
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Emoli5/Shadow-/main/No%20coldown'))()
+--so any ways its for almost every character except trash ones
+--also btw some moves are trash so i didnt bother editing them
+local starfire = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 0"].Starfire["Shared_StarSword"])
+local cyborg = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 0"].Cyborg["Shared_SonicCannon"])
+local robin1 = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 0"].Robin["Shared_Birdarang"])
+local robin2 = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 0"].Robin["Shared_SmokeBomb"])
+local bb = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 0"].BeastBoy["Shared_TigerForm"])
+local gizmo = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 1"].Gizmo["Shared_BombardmentMissile"])
+local approbin = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 1"]["Apprentice Robin"]["Shared_ThermalBlaster"])
+local terra1 = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 2"].Terra["Shared_RockVolley"])
+local terra2 = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 2"].Terra["Shared_RockPath"])
+local freak = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 2"]["Control Freak"]["Shared_TVHound"])
+local bigblackguy = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 2"].CinderBlock["Shared_TankHurl"])
+local badcy1 = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 4"]["Evil Cyborg"]["Shared_SonicDestruction"])
+local badcy2 = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 4"]["Evil Cyborg"]["Shared_BattleDome"])
+local badsf = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 4"]["Evil Starfire"]["Shared_StarVolley"])
+local tri1 = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 4"].Trigon["Shared_GroundShatter"])
+local tri2 = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 4"].Trigon["Shared_DeathBeam"])
+starfire.DEBOUNCE = 0.1
+cyborg.DEBOUNCE = 0.1
+robin1.DEBOUNCE = 0.1
+robin2.DEBOUNCE = 0.1
+bb.DEBOUNCE = 0.025
+gizmo.DEBOUNCE = 0.1
+approbin.PROJECTILE_SPEED = 1000
+approbin.DEBOUNCE = 0.1
+terra1.START_UP_TIME = 0
+terra1.PROJECTILE_SPEED = 700
+terra1.DEBOUNCE = 0.1
+terra2.MAX_PATHS = math.huge
+terra2.SECONDS_PER_PATH = 0
+freak.DEBOUNCE = 0.1
+freak.SPEED = 1000
+bigblackguy.DEBOUNCE = 0.1
+bigblackguy.SPEED = 350
+badcy1.DEBOUNCE = 0.1
+badcy2.DEBOUNCE = 0.1
+badcy2.ZONE_LIFETIME = math.huge
+badsf.DEBOUNCE = 0.1
+badsf.HIDDEN_TIME = 0
+tri1.MAX_NUM_HITS_PER_ATTACK = math.huge
+tri1.ACTIVE_DAMAGE_DURATION = 10
+tri1.DEBOUNCE = 0.1
+tri2.DEBOUNCE = 0.1
+tri2.PROJECTILE_SPEED = 600
+--the characters it works with
+--starfire
+--cyborg
+--robin
+--beastboy
+--gizmo
+--approbin
+--terra
+--controlfreak
+--cinderblock
+--evilcyborg
+--evilstarfire
+--trigon
 
 end) 
 
