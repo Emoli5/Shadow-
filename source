@@ -24,7 +24,7 @@ local function chat(str) chatevents.SayMessageRequest:FireServer(str, "All") end
 --// GUI
 local CmdGUI = Instance.new('ScreenGui')
 CmdGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-CmdGUI.Name = 'ShadowAdmin_GUI'
+CmdGUI.Name = 'YmirAdmin_GUI'
 CmdGUI:SetAttribute('IntroDone', false)
 
 local CmdMain = Instance.new('Frame')
@@ -147,7 +147,7 @@ CmdTitle.BackgroundTransparency = 1
 CmdTitle.BorderSizePixel = 0
 CmdTitle.Size = UDim2.new(0, 200, 0, 23)
 CmdTitle.Font = Enum.Font.SourceSansBold
-CmdTitle.Text = 'Ymir Admin '..ver
+CmdTitle.Text = 'Shadow Admin '..ver
 CmdTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
 CmdTitle.TextSize = 14.000
 CmdTitle.TextTransparency = 1
