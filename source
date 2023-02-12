@@ -28,7 +28,7 @@ CmdGUI.Name = 'ShadowAdmin_GUI'
 CmdGUI:SetAttribute('IntroDone', false)
 
 local CmdMain = Instance.new('Frame')
-CmdMain.Name = 'ShadowAdmin_Main'
+CmdMain.Name = 'YmirAdmin_Main'
 CmdMain.Parent = CmdGUI
 CmdMain.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 CmdMain.BorderColor3 = Color3.fromRGB(31, 31, 31)
@@ -38,7 +38,7 @@ CmdMain.Size = UDim2.new(0,0,0,0)
 CmdMain.AnchorPoint = Vector2.new(0.5, 0.5)
 
 local CmdBox = Instance.new('Frame')
-CmdBox.Name = 'ShadowAdmin_Box'
+CmdBox.Name = 'YmirAdmin_Box'
 CmdBox.Parent = CmdMain
 CmdBox.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 CmdBox.BorderColor3 = Color3.fromRGB(140, 140, 140)
@@ -48,7 +48,7 @@ CmdBox.Size = UDim2.new(0.996109784, 0, 0.36981371, 0)
 CmdBox.Visible = false
 
 local CmdNotif = Instance.new('TextLabel')
-CmdNotif.Name = 'ShadowAdmin_NotifText'
+CmdNotif.Name = 'YmirAdmin_NotifText'
 CmdNotif.Parent = CmdBox
 CmdNotif.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 CmdNotif.BackgroundTransparency = 1.000
@@ -62,7 +62,7 @@ CmdNotif.TextSize = 14.000
 CmdNotif.TextWrapped = true
 
 local CmdLogHandler = Instance.new('ScrollingFrame')
-CmdLogHandler.Name = 'ShadowAdmin_LogHandler'
+CmdLogHandler.Name = 'YmirAdmin_LogHandler'
 CmdLogHandler.Parent = CmdBox
 CmdLogHandler.Active = true
 CmdLogHandler.Visible = false
@@ -87,7 +87,7 @@ CmdLogExample.TextXAlignment = Enum.TextXAlignment.Left
 CmdLogExample.AutomaticSize = 'Y'
 
 local CmdBoxTitle = Instance.new('TextLabel')
-CmdBoxTitle.Name = 'ShadowAdmin_BoxTitle'
+CmdBoxTitle.Name = 'YmirAdmin_BoxTitle'
 CmdBoxTitle.Parent = CmdBox
 CmdBoxTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 CmdBoxTitle.BackgroundTransparency = 1
@@ -99,7 +99,7 @@ CmdBoxTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
 CmdBoxTitle.TextSize = 14.000
 
 local CmdHandler = Instance.new('ScrollingFrame')
-CmdHandler.Name = 'ShadowAdmin_CmdHandler'
+CmdHandler.Name = 'YmirAdmin_CmdHandler'
 CmdHandler.Parent = CmdMain
 CmdHandler.Active = true
 CmdHandler.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
@@ -122,7 +122,7 @@ CmdExample.TextSize = 14.000
 CmdExample.TextXAlignment = Enum.TextXAlignment.Left
 
 local CmdBar = Instance.new('TextBox')
-CmdBar.Name = 'ShadowAdmin_CmdBar'
+CmdBar.Name = 'YmirAdmin_CmdBar'
 CmdBar.Parent = CmdMain
 CmdBar.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
 CmdBar.BorderSizePixel = 0
@@ -140,20 +140,20 @@ CmdBar.BackgroundTransparency = 1
 CmdBar.TextTransparency = 1
 
 local CmdTitle = Instance.new('TextLabel')
-CmdTitle.Name = 'ShadowAdmin_Title'
+CmdTitle.Name = 'YmirAdmin_Title'
 CmdTitle.Parent = CmdMain
 CmdTitle.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 CmdTitle.BackgroundTransparency = 1
 CmdTitle.BorderSizePixel = 0
 CmdTitle.Size = UDim2.new(0, 200, 0, 23)
 CmdTitle.Font = Enum.Font.SourceSansBold
-CmdTitle.Text = 'Shadow Admin '..ver
+CmdTitle.Text = 'Ymir Admin '..ver
 CmdTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
 CmdTitle.TextSize = 14.000
 CmdTitle.TextTransparency = 1
 
 local CmdDescBox = Instance.new('Frame')
-CmdDescBox.Name = 'ShadowAdmin_DescBox'
+CmdDescBox.Name = 'YmirAdmin_DescBox'
 CmdDescBox.Parent = CmdMain
 CmdDescBox.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 CmdDescBox.BackgroundTransparency = 0.2500
@@ -162,7 +162,7 @@ CmdDescBox.Size = UDim2.new(0, 194, 0, 71)
 CmdDescBox.Visible = false
 
 local CmdDescTitle = Instance.new('TextLabel')
-CmdDescTitle.Name = 'ShadowAdmin_DescTitle'
+CmdDescTitle.Name = 'YmirAdmin_DescTitle'
 CmdDescTitle.Parent = CmdDescBox
 CmdDescTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 CmdDescTitle.BackgroundTransparency = 1.000
@@ -172,7 +172,7 @@ CmdDescTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
 CmdDescTitle.TextSize = 13.500
 
 local CmdDescription = Instance.new('TextLabel')
-CmdDescription.Name = 'ShadowAdmin_Description'
+CmdDescription.Name = 'YmirAdmin_Description'
 CmdDescription.Parent = CmdDescBox
 CmdDescription.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 CmdDescription.BackgroundTransparency = 1.000
@@ -200,7 +200,7 @@ _G.settings = {
 	Whitelisted = {},
 	Ranked = {},
 }
-local file = 'ShadowSettings.pl'
+local file = 'YmirAdminSettings.pl'
 local function load()
 	if (readfile and isfile and isfile(file)) then
 		_G.settings = Http:JSONDecode(readfile(file))
