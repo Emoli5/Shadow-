@@ -1,58 +1,383 @@
---so any ways its for almost every character except trash ones
---also btw some moves are trash so i didnt bother editing them
-local starfire = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 0"].Starfire["Shared_StarSword"])
-local cyborg = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 0"].Cyborg["Shared_SonicCannon"])
-local robin1 = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 0"].Robin["Shared_Birdarang"])
-local robin2 = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 0"].Robin["Shared_SmokeBomb"])
-local bb = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 0"].BeastBoy["Shared_TigerForm"])
-local gizmo = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 1"].Gizmo["Shared_BombardmentMissile"])
-local approbin = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 1"]["Apprentice Robin"]["Shared_ThermalBlaster"])
-local terra1 = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 2"].Terra["Shared_RockVolley"])
-local terra2 = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 2"].Terra["Shared_RockPath"])
-local freak = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 2"]["Control Freak"]["Shared_TVHound"])
-local bigblackguy = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 2"].CinderBlock["Shared_TankHurl"])
-local badcy1 = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 4"]["Evil Cyborg"]["Shared_SonicDestruction"])
-local badcy2 = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 4"]["Evil Cyborg"]["Shared_BattleDome"])
-local badsf = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 4"]["Evil Starfire"]["Shared_StarVolley"])
-local tri1 = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 4"].Trigon["Shared_GroundShatter"])
-local tri2 = require(game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 4"].Trigon["Shared_DeathBeam"])
-starfire.DEBOUNCE = 0.1
-cyborg.DEBOUNCE = 0.1
-robin1.DEBOUNCE = 0.1
-robin2.DEBOUNCE = 0.1
-bb.DEBOUNCE = 0.025
-gizmo.DEBOUNCE = 0.1
-approbin.PROJECTILE_SPEED = 1000
-approbin.DEBOUNCE = 0.1
-terra1.START_UP_TIME = 0
-terra1.PROJECTILE_SPEED = 700
-terra1.DEBOUNCE = 0.1
-terra2.MAX_PATHS = math.huge
-terra2.SECONDS_PER_PATH = 0
-freak.DEBOUNCE = 0.1
-freak.SPEED = 1000
-bigblackguy.DEBOUNCE = 0.1
-bigblackguy.SPEED = 350
-badcy1.DEBOUNCE = 0.1
-badcy2.DEBOUNCE = 0.1
-badcy2.ZONE_LIFETIME = math.huge
-badsf.DEBOUNCE = 0.1
-badsf.HIDDEN_TIME = 0
-tri1.MAX_NUM_HITS_PER_ATTACK = math.huge
-tri1.ACTIVE_DAMAGE_DURATION = 10
-tri1.DEBOUNCE = 0.1
-tri2.DEBOUNCE = 0.1
-tri2.PROJECTILE_SPEED = 600
---the characters it works with
---starfire
---cyborg
---robin
---beastboy
---gizmo
---approbin
---terra
---controlfreak
---cinderblock
---evilcyborg
---evilstarfire
---trigon
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Teen Titans Go By 17k_Shadowİnf", "BloodTheme")
+
+local Tab = Window:NewTab("script") 
+
+local Section = Tab:NewSection("script")
+
+Section:NewButton("hitbox", ".", function()
+
+
+	
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local label = Instance.new("TextLabel")
+local Hitbox = Instance.new("TextButton")
+local FlyGUI = Instance.new("TextButton")
+local Visualgui = Instance.new("TextButton")
+local Speedtool = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+main.Position = UDim2.new(0.40427351, 0, 0.34591195, 0)
+main.Size = UDim2.new(0, 315, 0, 220)
+main.Active = true
+main.Draggable = true
+
+label.Name = "label"
+label.Parent = main
+label.BackgroundColor3 = Color3.fromRGB(144, 144, 144)
+label.Size = UDim2.new(0, 315, 0, 40)
+label.Font = Enum.Font.SourceSans
+label.Text = "Teen Titan GUI"
+label.TextColor3 = Color3.fromRGB(0, 0, 0)
+label.TextScaled = true
+label.TextSize = 14.000
+label.TextWrapped = true
+
+Hitbox.Name = "Hit box"
+Hitbox.Parent = main
+Hitbox.BackgroundColor3 = Color3.fromRGB(60, 255, 1)
+Hitbox.Position = UDim2.new(0.114285722, 0, 0.372448981, 0)
+Hitbox.Size = UDim2.new(0, 113, 0, 50)
+Hitbox.Font = Enum.Font.SourceSans
+Hitbox.Text = "Hit box"
+Hitbox.TextColor3 = Color3.fromRGB(0, 0, 0)
+Hitbox.TextSize = 40.000
+Hitbox.MouseButton1Down:connect(function()
+	_G.HeadSize = 10
+
+	_G.Disabled = true
+
+	game:GetService('RunService').RenderStepped:connect(function()
+		if _G.Disabled then
+			for i,v in next, game:GetService('Players'):GetPlayers() do
+				if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+					pcall(function()
+						v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+						v.Character.HumanoidRootPart.Transparency = 0.7
+						v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+						v.Character.HumanoidRootPart.Material = "Neon"
+						v.Character.HumanoidRootPart.CanCollide = false
+					end)
+				end
+			end
+		end
+	end)
+end)
+
+FlyGUI.Name = "Fly GUI"
+FlyGUI.Parent = main
+FlyGUI.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FlyGUI.Position = UDim2.new(0.584127009, 0, 0.372448981, 0)
+FlyGUI.Size = UDim2.new(0, 113, 0, 50)
+FlyGUI.Font = Enum.Font.SourceSans
+FlyGUI.Text = "Fly GUI"
+FlyGUI.TextColor3 = Color3.fromRGB(0, 0, 0)
+FlyGUI.TextSize = 40.000
+FlyGUI.MouseButton1Down:connect(function()
+	--ARCEUS X FLY V2 SCRIPT BY me_ozoneYT
+	loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+
+end)
+
+Visualgui.Name = "Visual gui"
+Visualgui.Parent = main
+Visualgui.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+Visualgui.Position = UDim2.new(0.114285737, 0, 0.681539893, 0)
+Visualgui.Size = UDim2.new(0, 113, 0, 50)
+Visualgui.Font = Enum.Font.SourceSans
+Visualgui.Text = "Visual gui"
+Visualgui.TextColor3 = Color3.fromRGB(0, 0, 0)
+Visualgui.TextSize = 30.000
+Visualgui.MouseButton1Down:connect(function()
+	-- press v to use aimbot and press q to disable aimbot
+	loadstring(game:HttpGet("https://pastebin.com/raw/uw2P2fbY", true))()
+
+	PLAYER  = game.Players.LocalPlayer
+	MOUSE   = PLAYER:GetMouse()
+	CC      = game.Workspace.CurrentCamera
+
+	ENABLED      = false
+	ESP_ENABLED  = false
+
+	_G.FREE_FOR_ALL = false
+
+	_G.BIND        = 118
+	_G.ESP_BIND    = 49
+	_G.CHANGE_AIM  = 'q'
+
+	_G.AIM_AT = 'Head'
+
+	wait(1)
+
+	function GetNearestPlayerToMouse()
+		local PLAYERS      = {}
+		local PLAYER_HOLD  = {}
+		local DISTANCES    = {}
+		for i, v in pairs(game.Players:GetPlayers()) do
+			if v ~= PLAYER then
+				table.insert(PLAYERS, v)
+			end
+		end
+		for i, v in pairs(PLAYERS) do
+			if _G.FREE_FOR_ALL == false then
+				if v and (v.Character) ~= nil and v.TeamColor ~= PLAYER.TeamColor then
+					local AIM = v.Character:FindFirstChild(_G.AIM_AT)
+					if AIM ~= nil then
+						local DISTANCE                 = (AIM.Position - game.Workspace.CurrentCamera.CoordinateFrame.p).magnitude
+						local RAY                      = Ray.new(game.Workspace.CurrentCamera.CoordinateFrame.p, (MOUSE.Hit.p - CC.CoordinateFrame.p).unit * DISTANCE)
+						local HIT,POS                  = game.Workspace:FindPartOnRay(RAY, game.Workspace)
+						local DIFF                     = math.floor((POS - AIM.Position).magnitude)
+						PLAYER_HOLD[v.Name .. i]       = {}
+						PLAYER_HOLD[v.Name .. i].dist  = DISTANCE
+						PLAYER_HOLD[v.Name .. i].plr   = v
+						PLAYER_HOLD[v.Name .. i].diff  = DIFF
+						table.insert(DISTANCES, DIFF)
+					end
+				end
+			elseif _G.FREE_FOR_ALL == true then
+				local AIM = v.Character:FindFirstChild(_G.AIM_AT)
+				if AIM ~= nil then
+					local DISTANCE                 = (AIM.Position - game.Workspace.CurrentCamera.CoordinateFrame.p).magnitude
+					local RAY                      = Ray.new(game.Workspace.CurrentCamera.CoordinateFrame.p, (MOUSE.Hit.p - CC.CoordinateFrame.p).unit * DISTANCE)
+					local HIT,POS                  = game.Workspace:FindPartOnRay(RAY, game.Workspace)
+					local DIFF                     = math.floor((POS - AIM.Position).magnitude)
+					PLAYER_HOLD[v.Name .. i]       = {}
+					PLAYER_HOLD[v.Name .. i].dist  = DISTANCE
+					PLAYER_HOLD[v.Name .. i].plr   = v
+					PLAYER_HOLD[v.Name .. i].diff  = DIFF
+					table.insert(DISTANCES, DIFF)
+				end
+			end
+		end
+
+		if unpack(DISTANCES) == nil then
+			return false
+		end
+
+		local L_DISTANCE = math.floor(math.min(unpack(DISTANCES)))
+		if L_DISTANCE > 20 then
+			return false
+		end
+
+		for i, v in pairs(PLAYER_HOLD) do
+			if v.diff == L_DISTANCE then
+				return v.plr
+			end
+		end
+		return false
+	end
+
+	GUI_MAIN                           = Instance.new('ScreenGui', game.CoreGui)
+	GUI_TARGET                         = Instance.new('TextLabel', GUI_MAIN)
+	GUI_AIM_AT                         = Instance.new('TextLabel', GUI_MAIN)
+
+	GUI_MAIN.Name                      = 'AIMBOT'
+
+	GUI_TARGET.Size                    = UDim2.new(0,200,0,30)
+	GUI_TARGET.BackgroundTransparency  = 0.5
+	GUI_TARGET.BackgroundColor         = BrickColor.new('Fossil')
+	GUI_TARGET.BorderSizePixel         = 0
+	GUI_TARGET.Position                = UDim2.new(0.5,-100,0,0)
+	GUI_TARGET.Text                    = 'AIMBOT : OFF'
+	GUI_TARGET.TextColor3              = Color3.new(1,1,1)
+	GUI_TARGET.TextStrokeTransparency  = 1
+	GUI_TARGET.TextWrapped             = true
+	GUI_TARGET.FontSize                = 'Size24'
+	GUI_TARGET.Font                    = 'SourceSansBold'
+
+	GUI_AIM_AT.Size                    = UDim2.new(0,200,0,20)
+	GUI_AIM_AT.BackgroundTransparency  = 0.5
+	GUI_AIM_AT.BackgroundColor         = BrickColor.new('Fossil')
+	GUI_AIM_AT.BorderSizePixel         = 0
+	GUI_AIM_AT.Position                = UDim2.new(0.5,-100,0,30)
+	GUI_AIM_AT.Text                    = 'AIMING : HEAD'
+	GUI_AIM_AT.TextColor3              = Color3.new(1,1,1)
+	GUI_AIM_AT.TextStrokeTransparency  = 1
+	GUI_AIM_AT.TextWrapped             = true
+	GUI_AIM_AT.FontSize                = 'Size18'
+	GUI_AIM_AT.Font                    = 'SourceSansBold'
+
+	local TRACK = false
+
+	function CREATE(BASE, TEAM)
+		local ESP_MAIN                   = Instance.new('BillboardGui', PLAYER.PlayerGui)
+		local ESP_DOT                    = Instance.new('Frame', ESP_MAIN)
+		local ESP_NAME                   = Instance.new('TextLabel', ESP_MAIN)
+
+		ESP_MAIN.Name                    = 'ESP'
+		ESP_MAIN.Adornee                 = BASE
+		ESP_MAIN.AlwaysOnTop             = true
+		ESP_MAIN.ExtentsOffset           = Vector3.new(0, 1, 0)
+		ESP_MAIN.Size                    = UDim2.new(0, 5, 0, 5)
+
+		ESP_DOT.Name                     = 'DOT'
+		ESP_DOT.BackgroundColor          = BrickColor.new('Bright red')
+		ESP_DOT.BackgroundTransparency   = 0.3
+		ESP_DOT.BorderSizePixel          = 0
+		ESP_DOT.Position                 = UDim2.new(-0.5, 0, -0.5, 0)
+		ESP_DOT.Size                     = UDim2.new(2, 0, 2, 0)
+		ESP_DOT.Visible                  = true
+		ESP_DOT.ZIndex                   = 10
+
+		ESP_NAME.Name                    = 'NAME'
+		ESP_NAME.BackgroundColor3        = Color3.new(255, 255, 255)
+		ESP_NAME.BackgroundTransparency  = 1
+		ESP_NAME.BorderSizePixel         = 0
+		ESP_NAME.Position                = UDim2.new(0, 0, 0, -40)
+		ESP_NAME.Size                    = UDim2.new(1, 0, 10, 0)
+		ESP_NAME.Visible                 = true
+		ESP_NAME.ZIndex                  = 10
+		ESP_NAME.Font                    = 'ArialBold'
+		ESP_NAME.FontSize                = 'Size14'
+		ESP_NAME.Text                    = BASE.Parent.Name:upper()
+		ESP_NAME.TextColor               = BrickColor.new('Bright red')
+	end
+
+	function CLEAR()
+		for _,v in pairs(PLAYER.PlayerGui:children()) do
+			if v.Name == 'ESP' and v:IsA('BillboardGui') then
+				v:Destroy()
+			end
+		end
+	end
+
+	function FIND()
+		CLEAR()
+		TRACK = true
+		spawn(function()
+			while wait() do
+				if TRACK then
+					CLEAR()
+					for i,v in pairs(game.Players:GetChildren()) do
+						if v.Character and v.Character:FindFirstChild('Head') then
+							if _G.FREE_FOR_ALL == false then
+								if v.TeamColor ~= PLAYER.TeamColor then
+									if v.Character:FindFirstChild('Head') then
+										CREATE(v.Character.Head, true)
+									end
+								end
+							else
+								if v.Character:FindFirstChild('Head') then
+									CREATE(v.Character.Head, true)
+								end
+							end
+						end
+					end
+				end
+			end
+			wait(1)
+		end)
+	end
+
+	MOUSE.KeyDown:connect(function(KEY)
+		KEY = KEY:lower():byte()
+		if KEY == _G.BIND then
+			ENABLED = true
+		end
+	end)
+
+	MOUSE.KeyUp:connect(function(KEY)
+		KEY = KEY:lower():byte()
+		if KEY == _G.BIND then
+			ENABLED = false
+		end
+	end)
+
+	MOUSE.KeyDown:connect(function(KEY)
+		KEY = KEY:lower():byte()
+		if KEY == _G.ESP_BIND then
+			if ESP_ENABLED == false then
+				FIND()
+				ESP_ENABLED = true
+				print('ESP : ON')
+			elseif ESP_ENABLED == true then
+				wait()
+				CLEAR()
+				TRACK = false
+				ESP_ENABLED = true
+				print('ESP : OFF')
+			end
+		end
+	end)
+
+	MOUSE.KeyDown:connect(function(KEY)
+		if KEY == _G.CHANGE_AIM then
+			if _G.AIM_AT == 'Head' then
+				_G.AIM_AT = 'Torso'
+				GUI_AIM_AT.Text = 'AIMING : TORSO'
+			elseif _G.AIM_AT == 'Torso' then
+				_G.AIM_AT = 'Head'
+				GUI_AIM_AT.Text = 'AIMING : HEAD'
+			end
+		end
+	end)
+
+	game:GetService('RunService').RenderStepped:connect(function()
+		if ENABLED then
+			local TARGET = GetNearestPlayerToMouse()
+			if (TARGET ~= false) then
+				local AIM = TARGET.Character:FindFirstChild(_G.AIM_AT)
+				if AIM then
+					CC.CoordinateFrame = CFrame.new(CC.CoordinateFrame.p, AIM.CFrame.p)
+				end
+				GUI_TARGET.Text = 'AIMBOT : '.. TARGET.Name:sub(1, 5)
+			else
+				GUI_TARGET.Text = 'AIMBOT : OFF'
+			end
+		end
+	end)
+
+	repeat
+		wait()
+		if ESP_ENABLED == true then
+			FIND()
+		end
+	until ESP_ENABLED == false
+	wait()
+	_G.FREE_FOR_ALL = false
+	_G.BIND = 118 -- LEFT ALT
+	_G.ESP_BIND = 49 -- RIGHT CTRL
+end)
+
+Speedtool.Name = "Speed tool"
+Speedtool.Parent = main
+Speedtool.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+Speedtool.Position = UDim2.new(0.584127009, 0, 0.681539893, 0)
+Speedtool.Size = UDim2.new(0, 113, 0, 50)
+Speedtool.Font = Enum.Font.SourceSans
+Speedtool.Text = "Speed tool"
+Speedtool.TextColor3 = Color3.fromRGB(0, 0, 0)
+Speedtool.TextSize = 28.000
+Speedtool.MouseButton1Down:connect(function()
+	--Made By Raspyredstoner
+	mouse = game.Players.LocalPlayer:GetMouse()
+	tool = Instance.new("Tool")
+	tool.RequiresHandle = false
+	tool.Name = "Click To Speed Up"
+	tool.Activated:connect(function()
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+	end)
+	tool.Parent = game.Players.LocalPlayer.Backpack
+
+end)
+
+end) 
+
+Section:NewButton("no coldown", "c", function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Emoli5/Shadow-/main/No%20coldown'))()
+
+end) 
+
+Section:NewButton("my other script", "c", function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Emoli5/Shadow-/main/3ddddf"))()
+
+end) 
