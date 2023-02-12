@@ -1032,6 +1032,13 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/iShield2005/scripts/m
 
 end) 
 
+local Section = Tab:NewSection("teen titans go")
+
+Section:NewButton("op script", "c", function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Emoli5/Shadow-/main/No%20coldown'))()
+
+end) 
 
 local Section = Tab:NewSection("coming soon...")
 
