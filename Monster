@@ -1,3 +1,4 @@
+
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Monster Script By 17kShadowİnf", "BloodTheme")
 
@@ -11934,6 +11935,9 @@ while true do
 end
 
 end) 
+
+
+
 
 Section:NewButton("mobile ", "cost 50 k", function()
 
