@@ -6,6 +6,8 @@ local Tab = Window:NewTab("Script")
 
 local Section = Tab:NewSection("script")
 
+
+
 Section:NewButton("WWYD_Form", "ksks", function()
 
 --coolallball
@@ -11937,7 +11939,10 @@ end
 end) 
 
 
+local Tab = Window:NewTab("mobile keyboard")
 
+
+local Section = Tab:NewSection("mobile keyboard")
 
 Section:NewButton("mobile ", "cost 50 k", function()
 
