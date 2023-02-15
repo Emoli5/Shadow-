@@ -2267,6 +2267,18 @@ Notify("Fedoratum Admin Abuser", "Type prefix(customcmds) to see custom commands
 
 end)
 
+Section:NewButton("Fe Monster gui", "Troll", function() 
+
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/Emoli5/Shadow-/main/Monster'))()
+ 
+end) 
+
+
+Section:NewButton("Fe Neptuan V", "Troll", function() 
+
+
+
+end) 
  
 local Tab = Window:NewTab("Hand Auto Buys")
 
